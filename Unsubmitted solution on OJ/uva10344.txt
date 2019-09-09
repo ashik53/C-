@@ -1,0 +1,55 @@
+
+UVA 10334, simple backtracking
+
+How to compile
+g++ -o main main.cpp, then main
+
+#include bitsstdc++.h
+using namespace std;
+
+char str[] = {'','','+','-'};
+vectorchar result;
+vectorchar rules[307];
+int cnt[4],sizeOfRules;
+
+
+void backTrack(int sz,int len);
+int main(void){
+
+   double a = 10, b = 5;
+   cout abendl;
+    for(int i=0;i4;i++) cnt[i] = 4;
+    result.clear();
+    backTrack(0,4);
+    result.clear();
+
+    cout sizeOfRulesendl;
+
+
+
+  return 0;
+}
+
+void backTrack(int sz,int len){
+
+  if(len==sz){
+     rules[sizeOfRules++] = result;
+     return;
+  }
+
+  for(int i=0;i4;i++){
+
+     if(cnt[i]==0) continue;
+
+     cnt[i]--;
+
+     result.push_back(str[i]);
+
+
+     backTrack(sz+1,len);
+     cnt[i]++;
+     result.pop_back();
+
+  }//main loop
+
+}

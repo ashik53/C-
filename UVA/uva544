@@ -1,0 +1,69 @@
+
+4 3
+Karlsruhe Stuttgart 100
+Stuttgart Ulm 80
+Ulm Muenchen 120
+Karlsruhe Muenchen
+ans = 80
+
+5 5
+Karlsruhe Stuttgart 100
+Stuttgart Ulm 80
+Ulm Muenchen 120
+Karlsruhe Hamburg 220
+Hamburg Muenchen 170
+Muenchen Karlsruhe
+ans = 170
+
+/*
+8 9
+D R 10
+R J 20
+J I 10
+Z F 50
+Z H 70
+D H 90
+H E 60
+I F 40
+E J 50
+ ans = 50
+ */
+5 5
+c d 95
+a b 93
+e c 90
+b e 85
+b c 70
+a d
+ans = 85
+
+Critical cases
+6 6
+a b 93
+e r 87
+e b 85
+e c 90
+c d 95
+c b 70
+a d
+ans = 85 
+5 6
+e c 90
+c d 95
+c b 70
+a c 10
+e b 85
+b a 93
+a d
+ans = 85
+5 6
+e c 90
+c d 95
+c b 70
+a c 90
+e b 85
+b a 93
+a d
+ans = 90
+
+ 

@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string convertToLowerCases(string &str){
+
+    string s = "";
+    int len = str.size();
+    int dif = (int)'a' - (int)'z';
+    for(int i = 0; i < len; i++)
+    {
+         char ch = str[i];
+         if((int)ch >= (int)'A' && (int)ch <= (int)'Z'){
+            int value = (int)ch + dif;
+            s += (char)value;
+         }else if(((int)ch >= (int)'A' && (int)ch <= (int)'Z') || ((int)ch >= (int)'0' && (int)ch <= (int)'9')){
+            s += ch;
+         }
+    }
+} // func
+
+int isPalindrome(str){
+    int len = str.size();
+    for(int  i = 0, j = len - 1; i < len && j >= 0; i++, j--){
+        if(str[i] != str[j]) return 0;
+    }
+
+    return 1;
+}
+
+int solution(string str){
+
+       str = convertToLowerCases(str);
+
+       return isPalindrome(str);
+} //solution
+int main(){
+    string str;
+    while(cin >> str){
+        int ans = solution(str);
+        cout << ans << endl;
+    }
+}

@@ -1,0 +1,59 @@
+
+//UVA-10130 dp,easy knapSack
+
+/*How to compile
+g++ -o main main.cpp, then main
+*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define PII pair<int,int >
+
+int price[1007],limit,sizeOfArray,True,cases;
+int weight[1007];
+int vis[1007][37];
+int dpAra[1007][37];
+int recursion(int i,int sum);
+int main() {
+   int numberOfPeople;
+//input taking and initializing
+   scanf("%d",&cases);
+   for(int line=0;line<cases;line++){
+     scanf("%d",&sizeOfArray);
+     for(int i=0;i<sizeOfArray;i++){
+       scanf("%d%d",&price[i],&weight[i]);
+     }
+
+     scanf("%d",&numberOfPeople);
+     int ans = 0 ;
+     for(int i=0;i<numberOfPeople;i++){
+        scanf("%d",&limit);
+        True++;
+        ans += recursion(0,0);
+     }
+
+     printf("%d\n",ans);
+
+   }//all cases
+} //main function
+
+int recursion(int i,int sum){
+
+   if(vis[i][sum]==True) return dpAra[i][sum];
+
+   if(i==sizeOfArray) return 0;
+
+   int profit1,profit2;
+   vis[i][sum]= True;
+
+   if(sum+weight[i]<=limit){
+     profit1 =  price[i] + recursion(i+1,sum+weight[i]);
+   }
+   else profit1 = 0;
+
+   profit2 = recursion(i+1,sum);
+
+   return dpAra[i][sum] = max(profit1,profit2);
+}//recursion

@@ -1,0 +1,6 @@
+﻿  SegmentTreeNormal.cpp
+c:\all codes\সি++\algo and data structure\segment tree\segmenttreenormal\segmenttreenormal\segmenttreenormal.cpp(67): warning C4473: 'scanf_s' : not enough arguments passed for format string
+  c:\all codes\সি++\algo and data structure\segment tree\segmenttreenormal\segmenttreenormal\segmenttreenormal.cpp(67): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  c:\all codes\সি++\algo and data structure\segment tree\segmenttreenormal\segmenttreenormal\segmenttreenormal.cpp(67): note: the missing variadic argument 2 is required by format string '%c'
+  c:\all codes\সি++\algo and data structure\segment tree\segmenttreenormal\segmenttreenormal\segmenttreenormal.cpp(67): note: this argument is used as a buffer size
+  SegmentTreeNormal.vcxproj -> C:\All codes\সি++\Algo and Data structure\Segment Tree\SegmentTreeNormal\Debug\SegmentTreeNormal.exe

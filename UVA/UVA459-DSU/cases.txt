@@ -1,0 +1,22 @@
+2
+
+S
+AB
+AS
+EF
+FE
+
+ANS = 16
+S
+
+ANS = 19
+*******
+100
+
+E
+AB
+CD
+CB
+EC
+
+ANS = 1

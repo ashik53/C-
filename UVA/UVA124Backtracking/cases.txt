@@ -1,0 +1,17 @@
+
+a c e f g
+c g e a f c
+ans =
+eafcg
+efacg
+efcag
+efcga
+fceag
+fcega
+fcgea
+feacg
+fecag
+fecga
+
+v w x y z
+v y x v z v w v

@@ -1,0 +1,97 @@
+#include <bits/stdtr1c++.h>
+
+#define MAXN 100007
+#define INF 1000000010000
+#define clr(ar) memset(ar, 0, sizeof(ar))
+#define read() freopen("lol.txt", "r", stdin)
+#define dbg(x) cout << #x << " = " << x << endl
+using namespace std;
+ vector <int> v;
+#define ll long long
+typedef pair<int, int> Pair;
+set<int>all_nodes;
+set <Pair> S;
+vector <int> adjacency_list[MAXN];
+int number_of_nodes,number_of_edge;
+map<ll ,ll>dis;
+map<ll,ll>cost[MAXN*5];
+map<int,int>path;
+void dijkstra(int source){
+   S.clear();
+  dis.clear();
+  for(int i=1;i<=number_of_nodes;i++) dis[i] = INF;
+    path[source] = 0;
+    dis[source] = 0;
+    S.insert(Pair( dis[source], source ));
+    while(S.size()!=0){
+       Pair c  = *(S.begin());
+        S.erase(c);
+        int current_node = c.second;
+       // mark[current_node] = 1;
+        for(int i = 0;i<adjacency_list[current_node].size();i++){
+            int neighbour_node = adjacency_list[current_node][i];
+            int path_cost_to_neighbour =  cost[neighbour_node][current_node];
+            if( /*mark[neighbour_node]==0 && */dis[neighbour_node]>path_cost_to_neighbour+dis[current_node]){
+                dis[neighbour_node] = path_cost_to_neighbour+dis[current_node];
+                S.insert(Pair(dis[neighbour_node],neighbour_node));
+                path[neighbour_node] = current_node;
+               // cout<<current_node<<" putted at"<<" "<<neighbour_node<<endl;
+             }
+         }
+    }//set processing
+     set<int>:: iterator it = all_nodes.begin();
+     for(;it!=all_nodes.end();it++) adjacency_list[*it].clear();
+     //cout<<path[1]<<" "<<path[3]<<endl;
+  //cout<<dis[number_of_nodes]<<endl;
+  if(dis[number_of_nodes]==INF || number_of_edge==0) cout<<"-1\n";
+  else {
+   
+   int a = path[number_of_nodes];
+  // str.push_back(number_of_nodes+'0');
+   //str.push_back(a+'0');
+   v.push_back(number_of_nodes);
+   v.push_back(a);
+   a = path[a];
+  while(1){ 
+     if(a ==0) break;
+     //str.push_back(a+'0');
+     v.push_back(a);
+     a = path[a];
+
+   }
+   reverse(v.begin(),v.end());
+    for(int i = 0;i<v.size();i++){
+        if(i==v.size()-1) cout<<v[i];
+        else cout<<v[i]<<" ";
+    }
+    cout<<endl;
+    v.clear();
+   }
+}
+
+int main(){
+    int  source, destination, i, u, v, w,line,cases=1;
+    //cin>>line;
+ //while(line--){ 
+    S.clear();
+    cin >> number_of_nodes >> number_of_edge;
+    line = number_of_edge;
+    //cin>>source>>destination;
+    while (line--){
+        cin >> u >> v >> w; /// Undirected edge from u to v with weight w
+        adjacency_list[u].push_back(v);
+         cost[v][u] =w;
+        adjacency_list[v].push_back(u);
+        cost[u][v] = w;
+        all_nodes.insert(u);
+        all_nodes.insert(v);
+    }
+    /*int ans = */dijkstra(1);
+/*printf("Case #%d: ",cases++);
+    if(ans==0) cout<<"unreachable"<<endl;
+    else cout<<ans<<endl;
+    //memset(dis,0,sizeof dis);*/
+
+  // }//line;
+    return 0;
+}

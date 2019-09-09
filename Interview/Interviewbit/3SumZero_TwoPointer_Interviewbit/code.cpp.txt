@@ -1,0 +1,43 @@
+vector<vector<int> > Solution::threeSum(vector<int> &A) {
+    vector < vector <int> > ans;
+    vector <int> ara = A; 
+    
+    sort(ara.begin(), ara.end());
+    int sz = ara.size();
+    int sizeOfAns = 0;
+
+    for(int i = 0; i < sz; i++){
+        int j = i+1;
+        int k = sz-1;
+        int need = 0 - ara[i];
+
+        while(j < k){
+            int add = ara[j] + ara[k];
+            if(add == need){
+                vector<int> temp;
+                temp.push_back(ara[i]);
+                temp.push_back(ara[j]);
+                temp.push_back(ara[k]);
+
+                j++, k--;
+                bool ifPush = true;
+                    for(int xx = 0; xx < sizeOfAns; xx++){
+                        vector<int> temp2 = ans[xx];
+                        if(temp2[0] == temp[0] && temp2[1] == temp[1] && temp2[2] == temp[2]){
+                            ifPush = false;
+                            break;
+                        } //if
+                    } //loop
+
+                if(ifPush) {ans.push_back(temp); sizeOfAns++;}
+
+            } //add == need
+            else if(add < need) j++;
+            else k--;
+        } //while
+
+
+    } //for
+    
+    return ans;
+} // func

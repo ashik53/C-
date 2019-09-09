@@ -1,0 +1,71 @@
+
+
+/// interviewbit, count and say, unsolved
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+
+void func(string &str);
+
+string intToString(int num){
+
+    string str = "";
+
+    while(num){
+        str += ((num % 10) + '0');
+        num /= 10;
+    }
+
+    reverse(str.begin(), str.end());
+
+    return str;
+} //str
+
+
+
+int main(void){
+
+    string str;
+    int num;
+    while(/*getline(cin, str) */ cin >> num){
+        cout << intToString(num) << endl;
+        func(str);
+    } // while
+
+
+
+} // main func
+
+void func(string &str){
+
+    int cnt = 1;
+    char ch = 'a';
+    int len = str.size();
+
+    string newStr = "";
+
+    for(int i = 0; i < len; i++){
+
+        if(ch!= str[i]){
+            if(i!= 0){
+                cout << ch  << ": " << cnt << endl;
+               // string subStr =
+                newStr += ()
+            }
+            cnt = 1;
+            ch = str[i];
+        }else{
+            cnt++;
+        }
+
+        if(i == len-1){
+            cout << ch  << ": " << cnt << endl;
+        }
+    } //for
+
+
+} //func
+

@@ -1,0 +1,10 @@
+*input1
+weight limit = 15
+weight, profit
+5
+5 270
+4 200
+7 300
+8 400
+6 250
+profit = 720

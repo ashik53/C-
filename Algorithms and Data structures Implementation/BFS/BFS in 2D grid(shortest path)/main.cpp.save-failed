@@ -1,0 +1,97 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define pii pair<int,int>
+
+char info[107][107];
+int dis[107][107];
+bool vis[107][107];
+int row, col;
+int tx[] = {-1, 1, 0, 0};
+int ty[] = {0, 0, 1, -1};
+
+int bfs(int src_x, int src_y, int des_x, int des_y);
+
+int main(void){
+
+    int src_x, src_y, des_x, des_y;
+
+    cin >> col >> row;
+
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            cin >> info[i][j];
+        }
+
+
+
+    }
+
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            cout << info[i][j];
+
+        }
+        cout << endl;
+    }
+
+
+
+    while(true){
+
+      cin >> src_x >> src_y;
+      cin >> des_x >> des_y;
+
+      if(bfs(src_x, src_y, des_x, des_y) == -1) cout << "not possible" << endl;
+      else cout << "Distance is : " << bfs(src_x, src_y, des_x, des_y) <<endl;
+
+    } //while
+}
+
+int bfs(int src_x, int src_y, int des_x, int des_y){
+
+    memset(dis, 0, sizeof(dis[0][0]*row*col));
+    memset(vis, false, sizeof(vis[0][0]*row*col));
+
+
+
+    queue<pii> Queue;
+
+    Queue.push(pii(src_x, src_y));
+    dis[src_x][src_y] = 0;
+    vis[src_x][src_y] = true;
+
+
+    while(!Queue.empty()){
+
+        pii current = Queue.front();
+        Queue.pop();
+
+        for(int i = 0; i < 4; i++){
+
+            int nx = current.first + tx[i];
+            int ny = current.second + ty[i];
+
+            if(nx >= 0 && nx < row && ny >= 0 && ny < col && info[nx][ny] != '#' &&  vis[nx][ny] == false){
+                dis[nx][ny] = dis[current.first][current.second] + 1;
+                vis[nx][ny] = true;
+                Queue.push(pii(nx, ny));
+            }
+        }//for
+
+
+    }//while
+
+    /*for(int i = 0; i < row ; i++){
+        for (int j = 0; j < col; j++){
+            cout << dis[i][j] << " ";
+        }
+        cout << endl;
+    } */
+
+    if(!vis[des_x][des_y]) return -1;
+
+    return dis[des_x][des_y];
+
+} //
+

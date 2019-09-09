@@ -1,0 +1,101 @@
+UVA-562
+
+6
+5 7 8 12 13 19
+ans = 0
+3
+2 2 3
+ans = 1
+
+
+//UVA-562, simple recursion
+
+/*How to compile
+g++ -o main main.cpp, then main
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define PII pair<int,int >
+
+int totalCoins,total,True;
+int coinAra[107];
+int vis[107][100007];
+vector<int> minVector;
+
+int absoluteValue(int a,int b);
+void func(int index,int sum);
+
+int main() {
+
+
+    int cases;
+
+    scanf("%d",&cases);
+
+    for(int i=0;i<cases;i++){
+
+        scanf("%d",&totalCoins);
+
+        total = 0;
+        minVector.clear();
+
+        for(int coin = 0;coin<totalCoins;coin++){
+
+            scanf("%d",&coinAra[coin]);
+            //cout<<coinAra[i]<<endl;
+            total+=coinAra[coin];
+
+        }
+
+        if(totalCoins==0) printf("0\n");
+        else
+        {
+          True++;
+          func(0,0);
+          sort(minVector.begin(),minVector.end());
+          int result = minVector[0];
+          printf("%d\n",result);
+        }
+    }//input loop
+
+
+
+
+} //main function
+
+void func(int index,int sum){
+
+    if(index==totalCoins) return ;
+
+    if(vis[index][sum]==True) {
+            return;
+    }
+
+    vis[index][sum] = True;
+
+    int sum1 = total - sum;
+    int dif = absoluteValue(sum,sum1);
+
+    minVector.push_back(dif);
+
+    //cout<<index <<","<< sum << "  = " << dif <<endl;
+
+   /* cout<< "parent call "<< "("<<index <<","<<sum <<")"<<endl;
+    cout<< "first call-> index = "<<index+1 <<",sum+coinAra[index] = "<<sum+coinAra[index]<<endl;
+    cout<< "second call-> index = "<<index+1 <<",sum = "<<sum1<<endl; */
+    func(index+1,sum+coinAra[index]);
+    func(index+1,sum);
+
+}
+
+int absoluteValue(int a,int b){
+
+  int dif = a-b;
+
+  if(dif<0) dif*=-1;
+
+  return dif;
+
+}

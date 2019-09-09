@@ -1,0 +1,62 @@
+//String permutation , Backtracking, optimized and
+
+/*How to compile
+g++ -o main main.cpp, then main
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+char str[10];
+vector<char> result;
+int cnt[26];
+void countChar(char* str);
+void backTrack(int sz,int len);
+int main(void){
+   //input taking loop
+   while(true){
+      scanf("%s",str);
+      countChar(str);
+      result.clear();
+      backTrack(0,strlen(str));
+   }//input taking loop
+
+  return 0;
+}
+
+void backTrack(int sz,int len){
+
+  if(len==sz){
+     for(int x = 0;x<sz;x++){
+        char ch = result[x];
+        printf("%c",ch);
+     }
+     printf("\n");
+  }
+
+  for(int i=0;i<26;i++){
+
+     if(cnt[i]==0) continue;
+     cnt[i]--;
+     int addValue = (int)'a';
+     char ch = (char)i+addValue;
+     result.push_back(ch);
+     backTrack(sz+1,len);
+     cnt[i]++;
+     result.pop_back();
+
+  }//main loop
+
+}
+
+void countChar(char* str){
+   int subtractValue = (int)'a';
+   memset(cnt,0,sizeof(cnt));
+
+   for(int i=0;i<strlen(str);i++){
+       int id = ((int)str[i])-subtractValue;
+       cnt[id]++;
+   }
+
+
+
+}

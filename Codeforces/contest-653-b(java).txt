@@ -1,0 +1,123 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class ZSortCodeforces652B {
+	static class FastReader {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public FastReader() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+	};
+
+	
+	static FastReader userInput = new FastReader();
+	/*private static Scanner m;
+
+	public static void main(String[] args){
+		
+		int n;
+		m = new Scanner(System.in);
+		n=m.nextInt();
+		int ara[] = new int[n];
+		for(int i=0;i<n;i++)
+		{
+			ara[i] = m.nextInt();
+		}
+		Arrays.sort(ara);
+		for(int number:ara)System.out.println(number);
+	  }*/
+	
+	static int inputAra[] = new int[1007];
+	static int resultAra[] = new int[1007];
+	public static void main(String[] args) {
+
+		int n = userInput.nextInt();
+		 
+		int i,j;
+		for ( i = 1; i <= n; i++) {
+			inputAra[i] = userInput.nextInt();
+		}
+
+		sortArray(n);
+        
+		/*for (i = 1; i <= n; i++) {
+			System.out.print(inputAra[i ] + " ");
+		}
+		System.out.println(); */
+		
+		i=n;
+		j=n;
+		if(i%2!=0) i--;
+		for(;i>1;i-=2,j--) {
+			resultAra[i] = inputAra[j];
+		}
+		
+		
+		i=n;
+		if(i%2==0) i--;
+		for(;i>0;i-=2,j--) {
+			resultAra[i] = inputAra[j];
+		}
+
+		for (i = 1; i <= n; i++) {
+			System.out.print(resultAra[i ] + " ");
+		}
+
+	}// main 
+	
+	public static void sortArray(int n) {
+		for(int i=1; i<=n; i++)
+	    {
+	        int min = i;
+	        for(int j=i; j<=n; j++)
+	        {
+	            if(inputAra[j] <inputAra[min])
+	                min = j;
+
+	        }
+	         int temp = inputAra[i];
+	         inputAra[i] = inputAra[min];
+	         inputAra[min] = temp;
+	    }
+	}
+
+}

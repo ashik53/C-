@@ -1,0 +1,61 @@
+/// interviewbit, LIS, unsolved
+
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> adjList[107];
+int dis[107];
+bool vis[107];
+
+int bfs(int startNode, int  endNode);
+int main(void){
+
+    int numberOfPaths, a, b;
+
+    cin >> numberOfPaths;
+
+    for(int i = 0; i < numberOfPaths; i++){
+        cin >> a >> b;
+        adjList[a].push_back(b);
+        adjList[b].push_back(a);
+
+    }// for
+
+    while(cin >> a >> b){
+        cout << bfs(a, b) << endl;
+    }
+
+}
+
+int bfs(int startNode, int  endNode){
+
+    memset(dis, 0, sizeof(dis));
+    memset(vis, false, sizeof(vis));
+
+    queue<int> Queue;
+
+    Queue.push(startNode);
+    dis[startNode] = 0;
+    vis[startNode] = true;
+
+    while(!Queue.empty()){
+       int currentNode = Queue.front();
+       Queue.pop();
+
+       for(int i = 0; i < adjList[currentNode].size(); i++){
+
+            int neighbourNode = adjList[currentNode][i];
+
+            if(!vis[neighbourNode]){
+                vis[neighbourNode] = true;
+                dis[neighbourNode] = dis[currentNode] + 1;
+                Queue.push(neighbourNode);
+            }
+       }//
+    }//
+
+    return dis[endNode];
+
+}//
+
+

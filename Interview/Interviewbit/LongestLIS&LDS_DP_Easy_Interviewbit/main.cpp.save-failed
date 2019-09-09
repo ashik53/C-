@@ -1,0 +1,62 @@
+///unsolved
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int ara[1007];
+int sz;
+
+int biggest(int a, int b,int c){
+
+    int mx = INT_MIN;
+
+    int aa[10];
+    aa[0] = a;
+    aa[1] = b;
+    aa[2] = c;
+
+    for(int i = 0; i < 3; i++){
+        if(aa[i] > mx) mx = aa[i];
+    }
+
+    return mx;
+}
+int recursion(int index, int num, int inc, int dec){
+
+    if(index == sz) return 0;
+
+    int ans1 = 0;
+    int ans2 = 0;
+    int ans3 = 0;
+
+    if(inc == 1 && num > ara[index] ){
+        ans1  =  1 +  recursion(index+1, ara[index], 1, 0);
+    }else if(num < ara[index]){
+        ans2 = 1 + recursion(index+1, ara[index], 0, 1);
+    }
+
+    ans3 = 0 + recursion(index+1, num, inc, dec);
+
+    return biggest(ans1, ans2, ans3);
+} //recursion
+
+
+int main(){
+
+  //  int sz;
+
+    while(cin >> sz){
+        for(int i  = 0; i < sz; i++){
+            cin >> ara[i];
+        }
+        cout << recursion(0,-999, 1, 0) << endl;
+
+    } //while
+
+} //main
+
+
+
+

@@ -1,0 +1,24 @@
+/*ED35B
+
+2 4 7
+ANS = 4
+2 10 14
+ans = 10
+3 10 14
+ans = 7
+4 10 14
+ans = 5
+5 10 14
+ans = 4
+5 10 15
+ans = 5
+5 10 5
+ans = 2
+6 6 6
+ans = 2
+6 12 18
+ans = 4
+special , if a or b is less than (a+b)/n
+4 1 14 
+ans = 1;
+*/

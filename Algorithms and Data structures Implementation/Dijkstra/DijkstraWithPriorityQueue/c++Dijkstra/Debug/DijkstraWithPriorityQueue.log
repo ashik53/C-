@@ -1,0 +1,267 @@
+﻿  DijkstraWithPriorityQueue.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(778): error C2825: '_Alloc': must be a class or namespace when followed by '::'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(969): note: see reference to class template instantiation 'std::_Normal_allocator_traits<_Alloc>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(404): note: see reference to class template instantiation 'std::allocator_traits<_Alloc>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(449): note: see reference to class template instantiation 'std::_Vec_base_types<_Ty,_Alloc>' being compiled
+          with
+          [
+              _Ty=int,
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(659): note: see reference to class template instantiation 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>' being compiled
+          with
+          [
+              _Ty=int,
+              _Alloc=int
+          ]
+  c:\all codes\সি++\oop\dijkstrawithpriorityqueue\dijkstrawithpriorityqueue\dijkstrawithpriorityqueue.cpp(22): note: see reference to class template instantiation 'std::vector<int,int>' being compiled
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(778): error C2510: '_Alloc': left of '::' must be a class/struct/union
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(778): error C2061: syntax error: identifier 'value_type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(778): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(432): error C2825: '_Ty': must be a class or namespace when followed by '::'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): note: see reference to class template instantiation 'std::_Get_pointer_type<_Alloc,void>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(432): error C2510: '_Ty': left of '::' must be a class/struct/union
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(432): error C2061: syntax error: identifier 'value_type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(432): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): error C2039: 'type': is not a member of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): note: see declaration of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(449): error C2039: 'type': is not a member of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): note: see declaration of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(781): note: see reference to class template instantiation 'std::_Get_const_pointer_type<_Alloc,void>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(449): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(449): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(450): error C2825: '_Ty': must be a class or namespace when followed by '::'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(450): error C2510: '_Ty': left of '::' must be a class/struct/union
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(450): error C2061: syntax error: identifier 'value_type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(450): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(451): error C2065: '_Ptrty': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(451): error C2923: 'std::pointer_traits': '_Ptrty' is not a valid template type argument for parameter '_Ty'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(451): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(451): error C2146: syntax error: missing '>' before identifier '_Valty'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(451): error C2903: 'rebind': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(451): error C2903: 'pointer_traits': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(468): error C2039: 'type': is not a member of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): note: see declaration of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(782): note: see reference to class template instantiation 'std::_Get_void_pointer_type<_Alloc,void>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(468): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(468): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(469): error C2065: '_Ptrty': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(469): error C2923: 'std::pointer_traits': '_Ptrty' is not a valid template type argument for parameter '_Ty'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(469): error C2903: 'rebind': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(469): error C2903: 'pointer_traits': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(483): error C2039: 'type': is not a member of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): note: see declaration of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(783): note: see reference to class template instantiation 'std::_Get_const_void_pointer_type<_Alloc,void>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(483): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(483): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(484): error C2065: '_Ptrty': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(484): error C2923: 'std::pointer_traits': '_Ptrty' is not a valid template type argument for parameter '_Ty'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(484): error C2903: 'rebind': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(484): error C2903: 'pointer_traits': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(498): error C2039: 'type': is not a member of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(780): note: see declaration of 'std::_Get_pointer_type<_Alloc,void>'
+          with
+          [
+              _Alloc=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(516): note: see reference to class template instantiation 'std::_Get_difference_type<_Ty,void>' being compiled
+          with
+          [
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(785): note: see reference to class template instantiation 'std::_Get_size_type<_Alloc,void>' being compiled
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(498): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(498): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(499): error C2065: '_Ptrty': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(499): error C2923: 'std::pointer_traits': '_Ptrty' is not a valid template type argument for parameter '_Ty'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(499): error C2903: 'pointer_traits': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(499): error C2061: syntax error: identifier 'difference_type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(499): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(516): error C2039: 'type': is not a member of 'std::_Get_difference_type<_Ty,void>'
+          with
+          [
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(516): note: see declaration of 'std::_Get_difference_type<_Ty,void>'
+          with
+          [
+              _Ty=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(516): error C2146: syntax error: missing '>' before identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(786): error C2039: 'type': is not a member of 'std::_Get_difference_type<_Ty,void>'
+          with
+          [
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(516): note: see declaration of 'std::_Get_difference_type<_Ty,void>'
+          with
+          [
+              _Ty=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(786): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(786): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(799): error C3646: 'allocate': unknown override specifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(799): error C2065: '_Al': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(799): error C2275: '_Alloc': illegal use of this type as an expression
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(799): error C2226: syntax error: unexpected type 'std::_Normal_allocator_traits<_Alloc>::size_type'
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(800): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(804): error C3646: '_Allocate1': unknown override specifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(804): error C2065: '_Al': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(804): error C2275: '_Alloc': illegal use of this type as an expression
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(804): error C2226: syntax error: unexpected type 'std::_Normal_allocator_traits<_Alloc>::size_type'
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(806): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(810): error C3646: '_Allocate1': unknown override specifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(810): error C2065: '_Al': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(810): error C2275: '_Alloc': illegal use of this type as an expression
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(810): error C2226: syntax error: unexpected type 'std::_Normal_allocator_traits<_Alloc>::size_type'
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(812): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(816): error C3646: 'allocate': unknown override specifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(816): error C2065: '_Al': undeclared identifier
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(816): error C2275: '_Alloc': illegal use of this type as an expression
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(816): error C2226: syntax error: unexpected type 'std::_Normal_allocator_traits<_Alloc>::size_type'
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(818): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(822): error C2061: syntax error: identifier 'pointer'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(590): error C2027: use of undefined type 'std::_Replace_first_parameter<_Other,_Ty>'
+          with
+          [
+              _Other=int,
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(590): note: see declaration of 'std::_Replace_first_parameter<_Other,_Ty>'
+          with
+          [
+              _Other=int,
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(404): note: see reference to class template instantiation 'std::_Get_rebind_type<_Alloc,_Ty,void>' being compiled
+          with
+          [
+              _Alloc=int,
+              _Ty=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(590): error C2061: syntax error: identifier 'type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(590): error C2238: unexpected token(s) preceding ';'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(404): error C2794: 'type': is not a member of any direct or indirect base class of 'std::_Get_rebind_type<_Alloc,_Ty,void>'
+          with
+          [
+              _Alloc=int,
+              _Ty=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(404): error C2938: 'rebind_alloc<int>' : Failed to specialize alias template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(404): error C2794: 'rebind_alloc': is not a member of any direct or indirect base class of 'std::allocator_traits<_Alloc>'
+          with
+          [
+              _Alloc=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(404): error C2938: '_Rebind_alloc_t<int,int>' : Failed to specialize alias template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(405): error C2903: 'allocator_traits': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(407): error C2903: '_Is_simple_alloc_v': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(407): error C3245: 'std::_Is_simple_alloc_v': use of a variable template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(979): note: see declaration of 'std::_Is_simple_alloc_v'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(410): error C2955: 'std::allocator_traits': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(967): note: see declaration of 'std::allocator_traits'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(411): error C2955: 'std::allocator_traits': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(967): note: see declaration of 'std::allocator_traits'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(412): error C2955: 'std::allocator_traits': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(967): note: see declaration of 'std::allocator_traits'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(413): error C2955: 'std::allocator_traits': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(967): note: see declaration of 'std::allocator_traits'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(415): error C2970: 'std::conditional_t': template parameter '_Test': 'std::_Is_simple_alloc_v': an expression involving objects with internal linkage cannot be used as a non-type argument
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xtr1common(79): note: see declaration of 'std::conditional_t'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xmemory0(979): note: see declaration of 'std::_Is_simple_alloc_v'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(452): error C2903: 'allocator_traits': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xutility(298): error C3245: 'std::is_empty_v': use of a variable template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\type_traits(620): note: see declaration of 'std::is_empty_v'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(638): error C3245: 'std::is_final_v': use of a variable template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\type_traits(650): note: see declaration of 'std::is_final_v'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(638): error C2903: '_Compressed_pair': symbol is neither a class template nor a function template
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(666): error C2825: '_Alloc': must be a class or namespace when followed by '::'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(666): error C2510: '_Alloc': left of '::' must be a class/struct/union
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(666): error C2146: syntax error: missing '>' before identifier 'value_type'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(682): error C3245: 'std::is_nothrow_default_constructible_v': use of a variable template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\type_traits(939): note: see declaration of 'std::is_nothrow_default_constructible_v'
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(682): error C2131: expression did not evaluate to a constant
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(682): note: failure was caused by a read of an uninitialized symbol
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\vector(682): note: see usage of 'std::is_nothrow_default_constructible_v'

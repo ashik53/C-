@@ -1,0 +1,139 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+long long power(int limit){
+
+    long long num = 1;
+
+    for(int i = 1; i <= limit; i++){
+        num *= 10;
+    } //for
+
+    return num;
+} //power
+
+int numberMaking(string &str){
+
+    int len = str.size();
+
+    if(len > 11 && str[0] == '-') return INT_MIN;
+    else if(len > 11) return INT_MAX;
+
+    long long  num = 0;
+    int x = 0;
+    for(int i = len - 1; i >= 0; i--){
+        if(str[i] == '-') {num *= -1; continue;}
+        else if(str[i] == '+') continue;
+        int digit = str[i] - '0';
+        num += (digit * power(x));
+
+        if(num >= (long long )INT_MAX && str[0] == '-')  return INT_MIN;
+        else if(num >= (long long )INT_MAX) return INT_MAX;
+        x++;
+    } // for
+
+    return num;
+} //str
+
+
+
+string whiteSpaceRemoving(string &str){
+
+    int i = 0;
+
+    while(true){
+        if(str[0]!= ' '){
+            break;
+        }
+        str.erase(0, 1);
+    } //while
+
+    return str;
+} // func
+
+bool isValid(string &str){
+
+    int low = (int)'0';
+    int high = (int)'9';
+    int len = str.size();
+
+    if(!len) return false;
+    if(str[0] == '-') {
+        if(len == 1) return false;
+        if((int)str[1] < low || (int)str[1] > high) return false;
+        else if((int)str[1] >= low && (int)str[1] <= high)return true;
+        else return false;
+    } //if number is minus
+    if(str[0] == '+') {
+        if(len == 1) return false;
+        if((int)str[1] < low || (int)str[1] > high) return false;
+        else if((int)str[1] >= low && (int)str[1] <= high)return true;
+        else return false;
+    } //if number is plus
+    else {
+        if((int)str[0] < low || (int)str[0] > high) return false;
+        else if((int)str[0] >= low && (int)str[0] <= high)return true;
+        else return false;
+    }
+
+    return false;
+
+} //is valid
+
+string stringMaking(string &str){
+
+    string subStr = "";
+
+    int len = str.size();
+    int start;
+    if(str[0] == '-') {subStr += '-' ; start = 1;}
+    else if(str[0] == '+') start = 1;
+    else start = 0;
+
+
+    /// delete leading zeros
+
+    while(true){
+        if(str[start] == '0'){
+            str.erase(start, 1);
+        }else break;
+    } //while
+
+    for(int i = start; i < len; i++){
+
+        int value = (int)str[i];
+        if(value < (int)'0' || value > (int)'9') break;
+
+        subStr += str[i];
+
+    } //for
+
+    return subStr;
+} //stringmaking
+
+int solution(const string A){
+
+    string str = A;
+    str = whiteSpaceRemoving(str);
+
+    if(isValid(str) == false) str =  "0";
+    else str = stringMaking(str);
+
+    int ans = numberMaking(str);
+
+    return ans;
+} // solution
+
+
+int main(void){
+
+    // long long  num = LONG_LONG_MAX;
+
+    // cout << num << endl;
+    string str;
+
+    while(getline(cin , str)){
+        cout << solution(str) << endl;
+    } // str
+
+} //main
